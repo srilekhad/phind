@@ -17,21 +17,19 @@
             padding: 10px 0;
             text-align: center;
         }
-        footer {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .footer {
             background-color: #333;
             color: white;
-            padding: 10px 0;
             text-align: center;
+            padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .form-group {
             margin-bottom: 15px;
@@ -47,9 +45,9 @@
             border-radius: 4px;
         }
         .form-group button {
-            padding: 10px 20px;
             background-color: #333;
             color: white;
+            padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -65,64 +63,64 @@
     </header>
 
     <div class="container">
-        <h2>Rental Form</h2>
+        <h2>Find Your Dream Home</h2>
         <form id="rentalForm">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="property">Property</label>
-                <select id="property" name="property" required>
-                    <option value="">Select Property</option>
-                    <option value="house1">House 1</option>
-                    <option value="house2">House 2</option>
+                <label for="bedrooms">Bedrooms</label>
+                <select id="bedrooms" name="bedrooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>Options</label>
+                <label for="priceRange">Price Range</label>
+                <input type="range" id="priceRange" name="priceRange" min="500" max="5000" step="100" required>
+            </div>
+            <div class="form-group">
+                <label>Features</label>
                 <div>
-                    <input type="checkbox" id="option1" name="option1">
-                    <label for="option1">Option 1</label>
+                    <input type="checkbox" id="pool" name="pool">
+                    <label for="pool">Pool</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="option2" name="option2">
-                    <label for="option2">Option 2</label>
+                    <input type="checkbox" id="gym" name="gym">
+                    <label for="gym">Gym</label>
                 </div>
             </div>
             <div class="form-group">
-                <label>Payment Method</label>
+                <label>Pet Friendly</label>
                 <div>
-                    <input type="radio" id="payment1" name="payment" value="credit" required>
-                    <label for="payment1">Credit Card</label>
+                    <input type="radio" id="yes" name="petFriendly" value="yes">
+                    <label for="yes">Yes</label>
                 </div>
                 <div>
-                    <input type="radio" id="payment2" name="payment" value="debit">
-                    <label for="payment2">Debit Card</label>
+                    <input type="radio" id="no" name="petFriendly" value="no">
+                    <label for="no">No</label>
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit">Submit</button>
+                <button type="submit">Search</button>
             </div>
         </form>
     </div>
 
-    <footer>
+    <div class="footer">
         <p>&copy; 2023 House Rental Website. All rights reserved.</p>
-    </footer>
+        <p>Address: 123 Main St, Anytown, USA</p>
+        <p>Email: info@houserental.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
 
     <script>
         document.getElementById('rentalForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            // Add your form submission logic here
+            // Implement form submission logic here
             alert('Form submitted!');
         });
     </script>
