@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>House Rental Website</h1>
+    </header>
+
+    <div class="container">
+        <h2>Rental Form</h2>
+        <form id="rentalForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="property">Property</label>
+                <select id="property" name="property" required>
+                    <option value="">Select Property</option>
+                    <option value="house1">House 1</option>
+                    <option value="house2">House 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Options</label>
+                <div>
+                    <input type="checkbox" id="option1" name="option1">
+                    <label for="option1">Option 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="option2" name="option2">
+                    <label for="option2">Option 2</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div>
+                    <input type="radio" id="payment1" name="payment" value="credit" required>
+                    <label for="payment1">Credit Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="payment2" name="payment" value="debit">
+                    <label for="payment2">Debit Card</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 House Rental Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('rentalForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
